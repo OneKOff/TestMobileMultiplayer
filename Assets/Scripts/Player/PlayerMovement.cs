@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (!joystick) { return; }
+        
         _movement = joystick.Direction * maxSpeed;
     }
 

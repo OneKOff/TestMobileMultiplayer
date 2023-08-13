@@ -14,8 +14,6 @@ public class PlayerCoinPickup : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.gameObject.TryGetComponent(out Coin c)) { return; }
-
-        Debug.Log("PlayerCoinPickup: Coin picked up");
         
         _coinsAmount++;
         CoinPickedUp?.Invoke(_coinsAmount);
